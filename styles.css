@@ -1,52 +1,57 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000;
-    color: #fff;
+    background-color: #031105; /* Fondo */
+    color: #d9dcdb; /* Texto */
 }
 
 header {
-    background-color: #00ff00; /* Verde */
-    color: #000; /* Texto en negro */
+    background-color: #2c5420; /* Verde */
+    color: #d9dcdb; /* Texto en negro */
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #d9dcdb; /* Texto */
 }
 
 main {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 40px auto;
     padding: 0 20px;
 }
 
 .project {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #b1b4a9;
     padding-bottom: 20px;
 }
 
 .project h2 {
     margin-top: 0;
-    color: #fff; /* Texto en blanco */
+    color: #80933d; /* Verde */
+    font-size: 1.75rem;
+    text-transform: uppercase; /* Convertir el texto a mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
 }
 
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #00ff00; /* Verde */
-    color: #000; /* Texto en negro */
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+.project p {
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
-/* Estilo para el carrusel */
 .carousel {
     position: relative;
     width: 100%;
     overflow: hidden;
     margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-images {
@@ -58,6 +63,12 @@ footer {
     width: 100%;
     height: auto;
     max-height: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-images img:hover {
+    transform: scale(1.05); /* Ampliar ligeramente la imagen */
 }
 
 .carousel-button {
@@ -66,10 +77,15 @@ footer {
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
-    color: #fff;
+    color: #d9dcdb;
     padding: 10px;
     cursor: pointer;
     z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Oscurecer el botón al pasar el cursor */
 }
 
 .carousel-button.prev {
@@ -78,4 +94,79 @@ footer {
 
 .carousel-button.next {
     right: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #031105; /* Verde */
+    color: #d9dcdb; /* Texto en negro */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 0.875rem;
+}
+
+
+/* Añade esta regla al final de tu archivo CSS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplica la animación a los elementos principales */
+header, .project, footer {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Añade esta regla al final de tu archivo CSS */
+.carousel-images img {
+    /* Tus estilos anteriores */
+    transition: transform 0.3s ease;
+}
+
+.carousel-images img:hover {
+    transform: scale(1.05); /* Ampliar ligeramente la imagen */
+}
+
+
+.instagram-icon {
+    width: 20px; /* Ajusta el tamaño del icono */
+    height: 20px; /* Ajusta el tamaño del icono */
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #031105; /* Verde */
+    color: #d9dcdb; /* Texto en negro */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 0.875rem;
+}
+
+/* Estilo base para los enlaces */
+a {
+    color: antiquewhite; /* Color del texto */
+    text-decoration: none; /* Quita la subrayado por defecto */
+    transition: color 0.3s; /* Transición suave para el cambio de color */
+    /* Cambiar el tipo de letra */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipo de letra */
+    padding-left: 10px; /* Separación a la izquierda */
+}
+
+/* Estilo para los enlaces cuando el cursor está sobre ellos */
+a:hover {
+    color: #c0ffac; /* Cambia el color del texto al verde */
 }
